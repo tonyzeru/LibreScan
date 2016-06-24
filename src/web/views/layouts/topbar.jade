@@ -13,28 +13,28 @@ nav.navbar.navbar-default.navbar-static-top.custom-navbar.header-navbar
       #topbar-collapse(data-role='collapsible')
       ul.nav.navbar-nav
 
-    a(href='#guides', data-rel='popup', data-role='button', data-inline='true', data-theme='e') a(href='#')=  _('tb_guides')
-    #guides(data-role='popup', data-theme='d')
-      ul(data-role='listview', data-inset='true', style='min-width:210px;', data-theme='d')
-        li
+    select#select-guides(data-placeholder='true', data-native-menu="false")
+      option
+          a(href='#')=  _('tb_guides')
+      option(value='how_to_scan')
           a(href='#')= _('tb_how_to_scan')
-        li
+      option(value='chdk_installation')
           a(href='#')= _('tb_chdk_installation')
-        li
+      option(value='set_scanner')
           a(href='#')= _('tb_set_scanner')
 
-    a(href='#languages', data-rel='popup', data-role='button', data-inline='true', data-theme='e') a(href='#')=  _('tb_languages')
-    #languages(data-role='popup', data-theme='d')
-      ul(data-role='listview', data-inset='true', style='min-width:210px;', data-theme='d')
-        li
-          a(href='/language/spa')= _('tb_spanish_lang')
-        li
-          a(href='/language/en')= _('tb_english_lang')
-        li
-          a(href='/language/pt', disabled='disabled')= _('tb_portuguese_lang')
-        li
-          a(href='/language/gn', disabled='disabled')= _('tb_guarani_lang')
 
+    select#select-languages(data-placeholder='true', data-native-menu="false")
+      option
+          a(href='#')=  _('tb_languages')
+      option(value='spanish_lang')
+          a(href='/language/spa')= _('tb_spanish_lang')
+      option(value='english_lang')
+          a(href='/language/en')= _('tb_english_lang')
+      option(value='portuguese_lang')
+          a(href='/language/pt', disabled='disabled')= _('tb_portuguese_lang')
+      option(value='guarani_lang')
+          a(href='/language/gn', disabled='disabled')= _('tb_guarani_lang')
 
 
     .ui-content
